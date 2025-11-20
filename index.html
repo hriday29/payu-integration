@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>PayU Test Checkout</title>
+</head>
+<body onload="document.forms['payuForm'].submit()">
+  <h3>Redirecting to PayU (test)...</h3>
+
+  <form name="payuForm" method="POST" action="https://test.payu.in/_payment">
+    <!-- Required fields -->
+    <input type="hidden" name="key" value="k2FXnq" />
+    <input type="hidden" name="txnid" value="txn_test_001" />
+    <input type="hidden" name="amount" value="10.00" />
+    <input type="hidden" name="productinfo" value="Test Product" />
+    <input type="hidden" name="firstname" value="Harvey" />
+    <input type="hidden" name="email" value="hriday.vig@bluoryn.com" />
+    <input type="hidden" name="phone" value="9999999999" />
+
+    <!-- Correct SHA-512 hash for these exact values -->
+    <input type="hidden" name="hash" value="f6e3c399ef19e17938d7247ddcd726aac41b0b9bd008d1c1e4ffa8dd4d3c88e4f8f2db5658a4c9389eb487a473fc5334f31efbba0562466eefb615e4c66e95c0" />
+
+    <!-- Redirect URLs -->
+    <input type="hidden" name="surl" value="https://snaggy-farah-raspily.ngrok-free.dev/success" />
+    <input type="hidden" name="furl" value="https://snaggy-farah-raspily.ngrok-free.dev/failure" />
+
+    <!-- udf1..udf10 -->
+    <input type="hidden" name="udf1" value="" />
+    <input type="hidden" name="udf2" value="" />
+    <input type="hidden" name="udf3" value="" />
+    <input type="hidden" name="udf4" value="" />
+    <input type="hidden" name="udf5" value="" />
+    <input type="hidden" name="udf6" value="" />
+    <input type="hidden" name="udf7" value="" />
+    <input type="hidden" name="udf8" value="" />
+    <input type="hidden" name="udf9" value="" />
+    <input type="hidden" name="udf10" value="" />
+
+    <!-- Optional -->
+    <input type="hidden" name="service_provider" value="payu_paisa" />
+
+    <noscript>
+      <p>JavaScript is disabled. Click below to continue to PayU.</p>
+      <button type="submit">Pay Now</button>
+    </noscript>
+  </form>
+</body>
+</html>
