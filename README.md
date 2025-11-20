@@ -50,9 +50,6 @@ npm install
 Run the server:
 node server.js
 
-Expose via Ngrok (optional):
-ngrok http 3000
-
 ------------------------------------------------------------
 
 ## Important Notes
